@@ -1,7 +1,7 @@
 // Your code here
 const dodger = document.getElementById("dodger");
 
-// This function moves the dodger left
+//moveDodgerLeft function
 function moveDodgerLeft() {
     const leftNumbers = dodger.style.left.replace("px", "");
     const left = parseInt(leftNumbers, 10);
@@ -11,17 +11,17 @@ function moveDodgerLeft() {
     }
 }
 
-// This function moves the dodger right
+// A function TO move dodger to the right
 function moveDodgerRight() {
-    const leftNum = dodger.style.left.replace("px", "");
-    const left = parseInt(leftNum, 10);
+    const rightNumber = dodger.style.left.replace("px", "");
+    const left = parseInt(rightNumber, 10);
 
     if (left <= 360) {
         dodger.style.left = `${left + 1}px`;
     }
 }
 
-// Adds the eventlistener for the keydown events to the DOM
+//  keydown event handler to handle doger direction change
 document.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") {
         moveDodgerLeft();
